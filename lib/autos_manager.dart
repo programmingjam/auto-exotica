@@ -30,6 +30,7 @@ class _AutosManagerState extends State<AutosManager> {
       Container(
         margin: EdgeInsets.all(10.0),
         child: RaisedButton(
+          color: Theme.of(context).primaryColor,
           onPressed: () {
             setState(() {
               _autos.add('Ghibli');
@@ -38,7 +39,8 @@ class _AutosManagerState extends State<AutosManager> {
           child: Text('Add Auto'),
         ),
       ),
-      Autos(_autos)
-    ]);
+     Expanded(child: Autos(_autos))
+    ]
+    );
   }
 }
