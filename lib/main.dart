@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'auto_manager.dart';
 
-import './autos_manager.dart';
-
-main() => runApp(App());
+void main() => runApp(App());
 
 class App extends StatelessWidget {
   @override
@@ -10,14 +9,14 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        accentColor: Colors.deepPurple,
+        accentColor: Colors.deepOrangeAccent,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('AutoExotica'),
         ),
-        body: AutosManager('Maserati Ghibli'),
-      ),
+        body: AutoManager(),
+        ),
     );
   }
 }
