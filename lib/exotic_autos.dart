@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './pages/auto.dart';
+
 class ExoticAutos extends StatelessWidget {
   final List<String> autos;
 
@@ -11,6 +13,17 @@ class ExoticAutos extends StatelessWidget {
         children: [
           Image.asset('assets/ghibli.jpg'),
           Text(autos[index]),
+          ButtonBar(alignment: MainAxisAlignment.center, children: <Widget>[
+            FlatButton(
+              child: Text('Details'),
+              onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => AutoPage(),
+                    ),
+                  ),
+            )
+          ]),
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'auto_manager.dart';
+import './pages/home.dart';
 
 void main() => runApp(App());
 
@@ -11,12 +11,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
         accentColor: Colors.deepOrangeAccent,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('AutoExotica'),
-        ),
-        body: AutoManager(),
-        ),
+      home: HomePage(),
     );
   }
 }
